@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+  
+int main()
+{
+  cout << "          PROGRAM DERET FIBONACCI           " << endl;
+  cout << "============================================" << endl;
+  
+  int n, n1 = 0, n2 = 1, fn = 0;
+ 
+    cout << "Jumlah deret fibonacci yang dibutuhkkan: "; cin >> n;
+ 
+    for(int i = 1; i <= n; i++) {
+//deret nilai ke-1       
+	    if(i == 1) {
+            cout << n1 << " ";
+        }
+//deret nilai ke-2        
+        if(i == 2) {
+            cout << n2 << " ";
+        }
+//deret nilai ke-n        
+    	fn = n1 + n2;
+   	 	n1 = n2;
+    	n2 = fn;
+    	cout << fn << " ";
+    }
+   
+  cout << endl;
+  cout << "============================================" << endl;
+  return 0;
+}
